@@ -1,0 +1,36 @@
+<PantallaContador>:
+    BoxLayout:    
+        orientation: 'vertical'
+        padding: 50
+        spacing: 10
+
+        Label:
+            text: str(root.cuenta) 
+            font_size: '80sp'
+            color: 0, 1, 0, 1
+
+        Button:
+            text: '¡Presióname para sumar!'
+            size_hint_y: 0.1
+            size_hint_x: 0.3
+            pos_hint: {'x': 0.35, 'y': 0.35}
+            on_release: root.contadorSuma()
+        Button:
+            text: '¡Presióname para restar!'
+            size_hint_y: 0.1
+            size_hint_x: 0.3
+            pos_hint: {'x': 0.35, 'y': 0.35}
+            on_release: root.contadorResta()
+        Button:
+            text: '¡Presióname para multiplicar por 2!'
+            size_hint_y: 0.1
+            size_hint_x: 0.35
+            pos_hint: {'x': 0.33, 'y': 0.35}
+            on_release: root.multiPorDos()
+        Button:
+            text: '¡Presióname para dividr por 2!'
+            size_hint_y: 0.1
+            size_hint_x: 0.35
+            pos_hint: {'x': 0.33, 'y': 0.35}
+            on_release: root.dividir2()
+            

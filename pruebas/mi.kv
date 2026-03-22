@@ -1,0 +1,24 @@
+<pantalla>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: 'Bienvenido a mi App Móvil'
+            font_size: '24sp'
+            color: 0, 1, 0 , 1
+
+        TextInput:
+            hint_text: 'Usuario'
+            multiline: False
+        
+        TextInput:
+            hint_text: 'Contraseña'
+            password: False
+
+        Button:
+            text: 'Ingresar'
+            color: 1, 0, 0, 1
+            background_color: (1, 1, 1, 1)
+            on_release: root.validar_usuario()

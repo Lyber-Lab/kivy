@@ -1,0 +1,23 @@
+<AdministradorPantalla>:
+    PantallaContador:
+        name: 'melo' # Nombre interno para navegar
+    PantallaExito:
+        name: 'calo'
+
+<PantallaContador>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Esta es la Pantalla 1'
+        Button:
+            text: 'Ir a la siguiente'
+            on_release: root.manager.current = 'calo' # El comando mágico
+
+<PantallaExito>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: '¡Llegaste a la Pantalla 2!'
+        Button:
+            text: 'Volver al inicio'
+            on_release: root.manager.current = 'melo'
