@@ -1,0 +1,29 @@
+<Administrador>:
+    Pantalla1:
+        name: 'caso1'
+    Pantalla2:
+        name: 'caso2'
+
+<Pantalla1>:
+    BoxLayout: 
+        orientation: 'vertical'
+        Label:
+            text:'Esta es la pantalla 1'
+        Label:
+            text: str(root.cuenta)
+            font_size: '40sp'
+            color: 0, 1, 0, 1
+        Button:
+            text: '¡Presiona para subir el contador para ir a la pantalla 2!'
+            on_release: root.contador()
+
+<Pantalla2>:
+    BoxLayout: 
+        orientation: 'vertical'
+        Label:
+            text:'Esta es la pantalla 2'
+        Button:
+            text: '¡Presiona para cambiar de pantalla 1!'
+            on_release: root.manager.current = 'caso1'
+
+

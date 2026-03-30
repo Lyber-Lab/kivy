@@ -1,0 +1,36 @@
+<CalcularPromedio>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+        spacing: 15
+
+        Label:
+            text: 'Calcular Promedio de Notas'
+            font_size: '22sp'
+            size_hint_y: 0.2
+
+        TextInput:
+            id: input_nota
+            hint_text: "Ejemplo: 18.5"
+            multiline: False
+            input_filter: 'float'
+            font_size: '30sp'
+            size_hint_y: 0.2
+
+        Button: 
+            text: "Añadir Nota"
+            background_color: (0.2, 0.6, 1, 1)
+            on_release: root.agregar_nota()
+            size_hint_y: 0.2 
+
+        Button:
+            text: "Calcular Resultado Final"
+            background_color: (0.1, 0.8, 0.3, 1)
+            on_release: root.calcular()
+            size_hint_y: 0.2
+
+        Label:
+            text: root.mensaje
+            color: (1, 1, 0, 1) if "Error" not in root.mensaje else (1, 0, 0, 1)
+            font_size: '18sp'
+            size_hint_y: 0.2
