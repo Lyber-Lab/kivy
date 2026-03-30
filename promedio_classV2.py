@@ -3,7 +3,7 @@ from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from kivy.properties import StringProperty, DictProperty
 
-Builder.load_file('promedio_class.kv')
+Builder.load_file('promedio_classV2.kv')
 
 class CalcularPromedio(Screen):
     notas = DictProperty({})
