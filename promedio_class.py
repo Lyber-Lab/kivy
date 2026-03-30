@@ -3,7 +3,6 @@ from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from kivy.properties import StringProperty, ListProperty
 
-# Asegúrate de que el nombre del archivo coincida exactamente
 Builder.load_file('promedio_class.kv')
 
 class CalcularPromedio(Screen):
