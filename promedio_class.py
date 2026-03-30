@@ -18,7 +18,7 @@ class CalcularPromedio(Screen):
             if 0 <= nota <= 20:
                 self.notas.append(nota)
                 self.mensaje = f"Nota {len(self.notas)} añadida: {nota}"
-                self.ids.input_nota.text = "" # Limpia el input para la siguiente
+                self.ids.input_nota.text = ""
             else:
                 self.mensaje = "Error: la nota debe ser de 0 a 20"
         except ValueError:
