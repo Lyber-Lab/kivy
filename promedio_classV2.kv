@@ -3,10 +3,30 @@
         orientation: 'vertical'
         padding: 40
         spacing: 15
+        canvas.before:
+            Color:
+                rgba: (0.2, 0.2, 0.2, 1)
+            Rectangle:
+                pos:self.pos
+                size:self.size 
+        canvas.after:
+            Color:
+                rgba: (1, 0, 0, 1)
+            Line:
+                rectangle: (self.x, self.y, self.width, self.height)
+                width: 1
 
         Label:
             text: 'Calcular Promedio de Notas'
             font_size: '22sp'
+            size_hint_y: 0.2
+
+        TextInput:
+            id: input_nombre
+            hint_text: "Matemáticas"
+            multiline: False
+            input_type:  'text'
+            font_size: '30sp'
             size_hint_y: 0.2
 
         TextInput:
